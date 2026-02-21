@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: PlayerPrefab
+  m_TagString: Player
+  m_Layer: 0
+  m_Active: 1
+  m_Component:
+  - component: {fileID: 2} # Transform
+  - component: {fileID: 3} # PlayerSize
+  - component: {fileID: 4} # Optional StompAbility
+  - component: {fileID: 5} # SpriteRenderer (or MeshRenderer)
+  m_Children:
+  - fileID: 6 # ShrinkBar UI
+  - fileID: 7 # CrownIcon UI
+
+--- !u!4 &2
+Transform:
+  m_GameObject: {fileID: 1}
+  m_LocalPosition: {x:0, y:0, z:0}
+  m_LocalRotation: {x:0, y:0, z:0, w:1}
+  m_LocalScale: {x:1, y:1, z:1}
+
+--- !u!114 &3
+MonoBehaviour:
+  m_GameObject: {fileID: 1}
+  m_Script: {fileID: 11500000, guid: YOUR_GUID_HERE, type: 3} # PlayerSize.cs
+  currentSize: 1
+  minSize: 0.3
+
+--- !u!114 &4
+MonoBehaviour:
+  m_GameObject: {fileID: 1}
+  m_Script: {fileID: 11500000, guid: YOUR_GUID_HERE, type: 3} # StompAbility.cs
+  stompRange: 1.5
+  stompCooldown: 15
+  cooldownTimer: 0
+
+--- !u!114 &5
+MonoBehaviour:
+  m_GameObject: {fileID: 1}
+  m_Script: {fileID: 11500000, guid: YOUR_GUID_HERE, type: 3} # SpriteRenderer or MeshRenderer placeholder
+  sprite: {fileID: 0}
+  color: {r:1, g:1, b:1, a:1}
+
+--- !u!1001 &6
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: ShrinkBar
+  m_Layer: 0
+  m_Active: 1
+  m_Component:
+  - component: {fileID: 8} # RectTransform
+  - component: {fileID: 9} # Image (fill)
+
+--- !u!1001 &7
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: CrownIcon
+  m_Layer: 0
+  m_Active: 0
+  m_Component:
+  - component: {fileID: 10} # RectTransform
+  - component: {fileID: 11} # Image (crown sprite)
+  - component: {fileID: 12} # Animator (TinyCrown.anim)
