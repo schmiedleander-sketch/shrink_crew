@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_AnimatorBindings:
+  - path: ""
+    type: 2
+    property: m_LocalScale.x
+    curve:
+      serializedVersion: 2
+      m_Curve: !!omap
+      - 0: {time: 0.0, value: 1.0}
+      - 1: {time: 0.1, value: 0.8}   # squash down
+      - 2: {time: 0.2, value: 1.2}   # overshoot
+      - 3: {time: 0.3, value: 1.0}   # back to normal
+  - path: ""
+    type: 2
+    property: m_LocalScale.y
+    curve:
+      serializedVersion: 2
+      m_Curve: !!omap
+      - 0: {time: 0.0, value: 1.0}
+      - 1: {time: 0.1, value: 0.8}
+      - 2: {time: 0.2, value: 1.2}
+      - 3: {time: 0.3, value: 1.0}
+  m_AnimatorBindings:
+    loopTime: 0      # Play once
+    frameRate: 60
+    wrapMode: 1      # Once
